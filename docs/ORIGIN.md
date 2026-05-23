@@ -20,5 +20,5 @@ The goal was to show that access-log analysis belongs in the same conversation a
 
 It also reinforces the broader public story:
 
-- Director of Web & GTM Systems
+- Boston Enterprise Technologist
 - Pipeline Scaling & Threat Mitigation
