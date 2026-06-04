@@ -1,6 +1,9 @@
 # Anomaly Log Hunter
 
-TypeScript control plane for parsing access-log anomalies, burst abuse, and suspicious source patterns before they distort traffic and incident signals.
+Board-ready Kinetic Gain surface for parsing access-log anomalies, burst abuse, and suspicious source patterns before they distort traffic and incident signals.
+
+- Live: [http://anomaly.kineticgain.com/](http://anomaly.kineticgain.com/)
+- Repo: [https://github.com/mizcausevic-dev/anomaly-log-hunter](https://github.com/mizcausevic-dev/anomaly-log-hunter)
 
 ## Why this exists
 
@@ -11,6 +14,13 @@ Raw logs are usually where suspicious traffic goes to disappear. By then:
 - incident response gets stuck arguing about whether a spike was real, malicious, or just marketing
 
 `anomaly-log-hunter` turns abnormal traffic patterns into a business-readable queue before they distort resilience and growth decisions.
+
+## What it includes
+
+- TypeScript control plane for suspicious traffic, burst abuse, and source-pattern drift
+- synthetic anomaly lane covering scraper bursts, auth noise, and attribution-shaped traffic
+- reusable outputs for impact, block coverage, source clustering, and investigation posture
+- prerendered static site, JSON payloads, screenshots, and docs
 
 ## Routes
 
@@ -52,10 +62,8 @@ Open:
 
 ## Validation
 
-- `npm run build`
-- `npm run test`
-- `npm run demo`
-- `npm run smoke`
+- `npm run verify`
+- `npm run prerender`
 - `npm run render:assets`
 
 ## Docs
