@@ -105,8 +105,9 @@ function layout(title: string, activePath: string, body: string) {
       ul.clean { margin: 16px 0 0; padding-left: 18px; color: #dbe7fb; }
       ul.clean li { margin-top: 10px; line-height: 1.5; }
       .footer-note { margin-top: 20px; color: #88a5d4; font-size: 13px; letter-spacing: 0.04em; }
+      .depth-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
       @media (max-width: 1100px) {
-        .metrics, .cols-2, .cols-3 { grid-template-columns: 1fr; }
+        .metrics, .cols-2, .cols-3, .depth-grid { grid-template-columns: 1fr; }
         nav { justify-content: flex-start; }
         .topbar { flex-direction: column; align-items: flex-start; }
       }
@@ -131,6 +132,44 @@ function layout(title: string, activePath: string, body: string) {
 </html>`;
 }
 
+function renderProductDepth() {
+  return `
+    <section class="section">
+      <article class="panel">
+        <p class="eyebrow">Product depth</p>
+        <h2 class="section-title">Built for the gap between security logs, growth attribution, and executive action.</h2>
+        <p class="section-copy">Anomaly Log Hunter is not another raw-log viewer. It turns suspicious traffic into a shared operating surface where Security can explain abuse, Growth can protect attribution, Platform can prioritize containment, and leadership can see whether traffic quality is distorting revenue or incident posture.</p>
+      </article>
+      <div class="depth-grid">
+        <article class="panel">
+          <p class="eyebrow">GTM analyst lens</p>
+          <h2 class="section-title">Protect demand quality</h2>
+          <p class="section-copy">Separates real buyer interest from scraper loops, synthetic referrals, and bot-driven campaign noise before teams make budget or funnel calls from polluted data.</p>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">Value architect lens</p>
+          <h2 class="section-title">Quantify avoidable loss</h2>
+          <p class="section-copy">Connects abnormal request behavior to blocked coverage, route sensitivity, and estimated commercial exposure so remediation can be framed as recoverable margin.</p>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">Technical buyer lens</p>
+          <h2 class="section-title">Preserve forensic context</h2>
+          <p class="section-copy">Keeps fingerprint, source, ASN, burst rate, route pattern, and containment status attached to each event instead of reducing incidents to vague traffic spikes.</p>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">Executive lens</p>
+          <h2 class="section-title">Make the call clear</h2>
+          <p class="section-copy">Shows which abuse class to suppress first, which route is most exposed, and whether the next action is block, monitor, escalate, or explain to the business.</p>
+        </article>
+      </div>
+      <article class="panel">
+        <p class="eyebrow">What these repos have in common</p>
+        <h2 class="section-title">Each Kinetic Gain surface converts operational exhaust into decision evidence.</h2>
+        <p class="section-copy">This repo follows the same pattern as the broader suite: model a messy operational lane, name the risk in buyer-readable language, attach an owner and next action, expose reusable JSON, and ship a static proof surface that can be reviewed without internal system access.</p>
+      </article>
+    </section>`;
+}
+
 export function renderOverview() {
   const stats = summary();
   const signalMarkup = sourcePatterns()
@@ -152,6 +191,7 @@ export function renderOverview() {
       <h1>Suspicious traffic should be explainable before it becomes false incident noise.</h1>
       <p>Parse access-log anomalies, cluster repeated fingerprints, and turn noisy traffic bursts into business-facing risk signals for Growth, Security, and Platform teams.</p>
     </section>
+    ${renderProductDepth()}
     <section class="section">
       <div class="metrics">
         <article class="panel">
@@ -241,6 +281,7 @@ export function renderAnomalyLane() {
       <h1>Every suspicious burst gets a business-readable explanation.</h1>
       <p>This lane shows how request cadence, route selection, and block coverage combine into a clear priority queue for abuse containment.</p>
     </section>
+    ${renderProductDepth()}
     <section class="section">
       <article class="panel">
         <p class="eyebrow">Log Events</p>
@@ -333,6 +374,7 @@ export function renderDocs() {
       <h1>Modeled as a traffic-forensics control plane for Growth and Security teams.</h1>
       <p>This repo sits at the intersection of edge security, log analysis, and signal clarity. It is designed to show how suspicious traffic becomes a business and resilience issue, not just an ops detail.</p>
     </section>
+    ${renderProductDepth()}
     <section class="section">
       <div class="cols-2">
         <article class="panel">

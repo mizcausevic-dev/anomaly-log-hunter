@@ -22,6 +22,19 @@ Raw logs are usually where suspicious traffic goes to disappear. By then:
 - reusable outputs for impact, block coverage, source clustering, and investigation posture
 - prerendered static site, JSON payloads, screenshots, and docs
 
+## What this product does
+
+Anomaly Log Hunter is a traffic-integrity proof surface for the moment where Security, Growth, and Platform teams need the same answer: is this traffic real, risky, expensive, or misleading?
+
+- **SaaS GTM analyst view:** protects campaign and funnel reporting from scraper loops, synthetic referrals, and bot-shaped demand before budget decisions are made from polluted signals.
+- **SaaS value architect view:** translates abnormal request behavior into estimated commercial exposure, blocked coverage, and route-level priority so containment reads as recoverable margin.
+- **Technical buyer view:** keeps fingerprint, source, ASN, burst rate, route pattern, severity, and next action attached to each anomaly instead of leaving raw logs as isolated ops evidence.
+- **Executive narrative:** shows whether leadership should block, monitor, escalate, or explain the abnormal traffic before it becomes false incident noise or bad growth data.
+
+## What these repos have in common
+
+This repo follows the broader Kinetic Gain pattern: turn operational exhaust into decision evidence. Each surface models a messy control lane, names the risk in buyer-readable language, attaches an owner or next action, exposes reusable JSON, and ships a static proof page that can be reviewed without internal system access.
+
 ## Routes
 
 - `/`
