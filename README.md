@@ -22,7 +22,7 @@ Raw logs are usually where suspicious traffic goes to disappear. By then:
 - reusable outputs for impact, block coverage, source clustering, and investigation posture
 - prerendered static site, JSON payloads, screenshots, and docs
 
-## What this product does
+## Product depth
 
 Anomaly Log Hunter is a traffic-integrity proof surface for the moment where Security, Growth, and Platform teams need the same answer: is this traffic real, risky, expensive, or misleading?
 
@@ -34,6 +34,13 @@ Anomaly Log Hunter is a traffic-integrity proof surface for the moment where Sec
 ## What these repos have in common
 
 This repo follows the broader Kinetic Gain pattern: turn operational exhaust into decision evidence. Each surface models a messy control lane, names the risk in buyer-readable language, attaches an owner or next action, exposes reusable JSON, and ships a static proof page that can be reviewed without internal system access.
+
+## Operating workflow
+
+1. Ingest sampled access-log records, source fingerprints, route patterns, and block outcomes.
+2. Classify each burst by abuse category, severity, estimated commercial impact, and containment posture.
+3. Group repeated source behavior so teams can distinguish isolated noise from coordinated abuse.
+4. Publish an executive-readable proof page plus JSON outputs that Security, Growth, and Platform teams can review together.
 
 ## Routes
 

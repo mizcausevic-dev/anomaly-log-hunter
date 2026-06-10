@@ -127,6 +127,17 @@ function layout(title: string, activePath: string, body: string) {
         <nav>${nav}</nav>
       </header>
       ${body}
+      <footer class="footer-note">
+        Anomaly Log Hunter
+        <span aria-hidden="true"> / </span>
+        <a href="http://anomaly.kineticgain.com/">anomaly.kineticgain.com</a>
+        <span aria-hidden="true"> / </span>
+        <a href="https://github.com/mizcausevic-dev/anomaly-log-hunter">GitHub</a>
+        <span aria-hidden="true"> / </span>
+        <a href="https://portfolio.kineticgain.com/">Portfolio</a>
+        <span aria-hidden="true"> / </span>
+        <a href="https://kineticgain.com/">Kinetic Gain</a>
+      </footer>
     </main>
   </body>
 </html>`;
@@ -340,6 +351,7 @@ export function renderSourcePatterns() {
       <h1>Traffic fingerprints matter more than one noisy IP at a time.</h1>
       <p>Clustered source patterns show whether unusual traffic is just background noise or a coordinated behavior that needs stronger suppression and better incident context.</p>
     </section>
+    ${renderProductDepth()}
     <section class="section">
       ${cards}
     </section>`;
@@ -354,6 +366,7 @@ export function renderVerification() {
       <h1>This build proves log forensics belongs in the revenue and resilience stack.</h1>
       <p>The point is not raw log volume. The point is exposing which traffic patterns are already shaping growth metrics, platform strain, or incident response decisions.</p>
     </section>
+    ${renderProductDepth()}
     <section class="section">
       <article class="panel">
         <p class="eyebrow">Release Checks</p>
